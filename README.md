@@ -2,8 +2,8 @@
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
+   git clone https://github.com/karimharbb/Auth-FrontEnd.git
+   cd Auth-FrontEnd
    ```
 2. Install dependencies:
 
