@@ -1,4 +1,3 @@
-
 ## How to run it
 
 1. Clone this repo:
@@ -16,14 +15,15 @@
 
    ```
    npm run dev
-  ```
+   ```
+
+````
 
 4.  Visit :
 
-```
-http://localhost:5173
+```http://localhost:5173
+````
 
-```
 ---
 
 # React Authentication Demo
@@ -66,4 +66,3 @@ src/
 ├── App.tsx → Routing + PrivateRoute logic
 ├── App.css → Styling
 └── main.tsx → Entry point
-
