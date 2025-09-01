@@ -51,7 +51,7 @@ I kept it lightweight and modern:
 
 - **React + Vite + TypeScript** → fast, clean setup.
 - **React Router v6** → for private/public routes.
-- **CSS (Glassmorphism + Man Utd inspired theme)** → just to make it look nice.
+- **CSS ()** → just to make it look nice.
 - **JWT Authentication** → token-based auth like you’d see in real apps.
 
 ---
