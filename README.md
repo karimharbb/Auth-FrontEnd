@@ -16,9 +16,9 @@
 
    ```
    npm run dev
- ```
+  ```
 
-4. Visit :
+4.  Visit :
 
 ```
 http://localhost:5173
