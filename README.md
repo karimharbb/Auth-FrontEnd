@@ -1,69 +1,90 @@
-# React + TypeScript + Vite
+# React Authentication Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small authentication demo I built as part of an interview task.  
+The idea is simple: **sign up, sign in, and access a protected page** only if you’re logged in.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What it does
 
-## Expanding the ESLint configuration
+- Let’s you **create an account** (sign up).
+- You can **log in** with your account.
+- If login is successful, a **JWT access token** is stored in `localStorage`.
+- That token is used to check if you’re allowed to see protected pages.
+- If you’re not logged in, you get redirected back to the signin page.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Basically—it mimics the core of how most modern apps handle authentication.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Project Structure (at a glance)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# React Authentication Demo
+
+Hey 👋 This is a small authentication demo I built as part of an interview task.  
+The idea is simple: **sign up, sign in, and access a protected page** only if you’re logged in.
+
+---
+
+## What it does
+
+- Let’s you **create an account** (sign up).
+- You can **log in** with your account.
+- If login is successful, a **JWT access token** is stored in `localStorage`.
+- That token is used to check if you’re allowed to see protected pages.
+- If you’re not logged in, you get redirected back to the signin page.
+
+Basically—it mimics the core of how most modern apps handle authentication.
+
+---
+
+## Tech Choices
+
+I kept it lightweight and modern:
+
+- **React + Vite + TypeScript** → fast, clean setup.
+- **React Router v6** → for private/public routes.
+- **CSS (Glassmorphism + Man Utd inspired theme)** → just to make it look nice.
+- **JWT Authentication** → token-based auth like you’d see in real apps.
+
+---
+
+## Project Structure
+
+src/
+├── pages/
+│ ├── signup.tsx → Signup page
+│ ├── login.tsx → Signin page
+│ └── home.tsx → Protected Home page
+├── App.tsx → Routing + PrivateRoute logic
+├── App.css → Styling
+└── main.tsx → Entry point
+
+---
+
+## How to run it
+
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/<your-username>/<repo-name>.git
+   cd <repo-name>
+   ```
+2. Install dependencies:
+
+   ```npm install
+
+   ```
+
+3. Start the app:
+
+   ```npm run dev
+
+
+   ```
+
+4. Visit :
+
 ```
+http://localhost:5173
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
